@@ -15,7 +15,6 @@ public class Question1 {
 		largestNum(arr);
 	}
 
-
 	public static int largestNum(int[] arr) {
 
 		int max = Integer.MIN_VALUE;

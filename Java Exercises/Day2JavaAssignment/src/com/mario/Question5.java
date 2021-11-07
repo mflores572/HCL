@@ -8,7 +8,7 @@ class B extends A {
 	String b = "from class B\n";
 }
 
-class Inherit extends B{
+class Inherit extends B {
 	String c = a + b + "and finally from Inherit class";
 }
 
