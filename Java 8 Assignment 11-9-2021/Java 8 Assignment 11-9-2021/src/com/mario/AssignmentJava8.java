@@ -70,7 +70,6 @@ public class AssignmentJava8 {
 		// * x)List down the names of all employees in each dept?
 		System.out.println("Task 10: ");
 		getEmpInAllDept(employeeList);
-
 	}
 
 	// * i) How many male and female employees are there?
