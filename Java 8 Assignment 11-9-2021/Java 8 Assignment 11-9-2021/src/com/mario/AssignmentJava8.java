@@ -42,7 +42,7 @@ public class AssignmentJava8 {
 
 		// * v)Find out most senior employee in this emp class?
 		System.out.println("Task 5: ");
-		GetMostSenior(employeeList);
+		getMostSenior(employeeList);
 		System.out.println();
 
 		// * vi) Count the number of employees in each dept?
@@ -50,8 +50,7 @@ public class AssignmentJava8 {
 		getEmpCountByDept(employeeList);
 		System.out.println();
 
-		// * vii) Find male and female employees are there in the CS dept and Mechanical
-		// dept?
+		// * vii) Find male and female employees in the CS dept and Mechanical dept
 		System.out.println("Task 7: ");
 		getEmpInDepts(employeeList, "CS");
 		getEmpInDepts(employeeList, "Mechanical");
@@ -115,7 +114,7 @@ public class AssignmentJava8 {
 	}
 
 	// * v)Find out most senior employee in this emp class?
-	public static void GetMostSenior(List<Emp> employeeList) {
+	public static void getMostSenior(List<Emp> employeeList) {
 		Optional<Emp> o = employeeList.stream().sorted(Comparator.comparingInt(Emp::getYearOfJoining)).findFirst();
 		Emp senior = o.get();
 
@@ -131,8 +130,7 @@ public class AssignmentJava8 {
 		System.out.println(m);
 	}
 
-	// * vii) Find male and female employees are there in the CS dept and Mechanical
-	// dept
+	// * vii) Find male and female employees in the CS dept and Mechanical dept
 	public static void getEmpInDepts(List<Emp> employeeList, String dept) {
 		List<String> names = new ArrayList<>();
 		employeeList.stream().filter(e -> e.getDepartment() == dept).forEach(e -> {
